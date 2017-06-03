@@ -3,11 +3,11 @@ package split.split;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class thirdpage extends AppCompatActivity {
+public class JoinRoom extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_thirdpage);
+        setContentView(R.layout.activity_join_room);
     }
 }

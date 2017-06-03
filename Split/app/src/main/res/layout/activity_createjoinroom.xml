@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="split.split.CreateJoinRoom">
+    tools:context="split.split.createjoinroom">
 
     <Button
         android:id="@+id/join_room"
@@ -24,5 +24,6 @@
         android:onClick="roomCreate"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="216dp" />
+
 
 </android.support.constraint.ConstraintLayout>

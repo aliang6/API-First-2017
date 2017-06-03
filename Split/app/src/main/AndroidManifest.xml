@@ -9,16 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateJoinRoom">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".Last_Page" />
-        <activity android:name=".thirdpage"></activity>
-        <activity android:name=".CreateRoom"></activity>
+        <activity android:name=".thirdpage" />
+        <activity android:name=".CreateRoom" />
+        <activity android:name=".ready_page" />
+        <activity android:name=".createjoinroom" />
+        <activity android:name=".JoinRoom" />
+        <activity android:name=".VoteforGame"></activity>
     </application>
 
 </manifest>
