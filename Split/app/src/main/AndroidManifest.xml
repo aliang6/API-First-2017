@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ready_page" />
+        <activity android:name=".ReadyPage"/>
         <activity android:name=".VoteforGame"></activity>
         <activity android:name=".JoinRoom"></activity>
         <activity android:name=".Last_Page"></activity>

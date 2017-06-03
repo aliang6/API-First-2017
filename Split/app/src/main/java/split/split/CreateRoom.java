@@ -18,16 +18,15 @@ public class CreateRoom extends AppCompatActivity {
         final String localPlayerName = getIntent().getStringExtra("localname");
         TextView t = (TextView)findViewById(R.id.LocalNameText);
         t.setText(localPlayerName);
-
-        Button joinButton = (Button)findViewById(R.id.button);
+        Button joinButton = (Button)findViewById(R.id.readyButton);
 
         joinButton.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View view) {
                         Intent intent = new Intent(view.getContext(), ReadyPage.class);
                         // Changes value for local player name
-                        intent.putExtra("localname", localPlayerName);
-                        startActivityForResult(intent, 0);
+                        intent.putExtra("localName", localPlayerName);
+                        startActivity(intent);
                     }
                 }
         );

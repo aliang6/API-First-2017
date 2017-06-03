@@ -82,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.503" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/readyButton"
         android:layout_width="204dp"
         android:layout_height="0dp"
         android:backgroundTint="@android:color/holo_blue_light"
