@@ -7,7 +7,7 @@
     tools:context="split.split.CreateJoinRoom">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/join_room"
         android:layout_width="328dp"
         android:layout_height="129dp"
         android:background="@android:color/holo_blue_light"
@@ -16,11 +16,12 @@
         tools:layout_editor_absoluteY="366dp" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/create_room"
         android:layout_width="328dp"
         android:layout_height="129dp"
         android:background="@android:color/holo_red_light"
         android:text="Create Room"
+        android:onClick="roomCreate"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="216dp" />
 
