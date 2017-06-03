@@ -2,32 +2,45 @@ package split.split;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.content.Intent;
+
+import android.widget.EditText;
+import android.widget.Button;
 import android.view.View;
+import android.content.Intent;
 
 public class CreateJoinRoom extends AppCompatActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_join_room);
 
-    }
+        Button createRoom = (Button)findViewById(R.id.CreateButton);
+        Button joinRoom = (Button)findViewById(R.id.JoinButton);
+        final EditText nameInput = (EditText)findViewById(R.id.editText);
 
-    /**
-     * Create a room - called when user creates a room
-     */
-    public void roomCreate(View view) {
-        Intent createRoom = new Intent(this, CreateRoom.class);
-        startActivity(createRoom);
-    }
+        // Switch to Create Room screen when button is clicked
+        createRoom.setOnClickListener(
+            new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), CreateRoom.class);
+                    // Changes value for local player name
+                    intent.putExtra("localname", nameInput.getText().toString());
+                    startActivityForResult(intent, 0);
+                }
+            }
+        );
 
-    /**
-     * Join a room - called when user joins a room
-     */
-    public void roomJoin(){
-        //Intent joinRoom = new Intent(this, CreateRoomActivity.class);
-        //startActivity(joinRoom);
+        // Switch to Join Room screen when button is clicked
+        joinRoom.setOnClickListener(
+            new View.OnClickListener() {
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), JoinRoom.class);
+                    // Passes value for local player name
+                    intent.putExtra("localname", nameInput.getText().toString());
+                    startActivityForResult(intent, 0);
+                }
+            }
+        );
     }
 }

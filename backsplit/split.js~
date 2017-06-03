@@ -1,0 +1,12 @@
+const express = require('express')
+const MongoClient = require('mongodb').MongoClient
+const bodyParser = require('body-parser');
+
+const app = express()
+const port = 8004
+
+require('./api/routes')(app,{});
+
+app.listen(port, () => {
+	console.log('Located at port ' + port);
+});

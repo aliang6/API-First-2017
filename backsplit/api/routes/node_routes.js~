@@ -1,0 +1,6 @@
+module.exports = function(app, db){
+	app.post('/room',(req,res) =>{
+		console.log(req.body);
+		res.json({hi:"sup"});
+	});
+};
