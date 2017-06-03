@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 import android.os.Handler;
+import android.widget.EditText;
+import android.graphics.Color;
 
 public class ReadyPage extends AppCompatActivity {
 
@@ -20,16 +22,39 @@ public class ReadyPage extends AppCompatActivity {
         TextView t = (TextView)findViewById(R.id.localname);
         t.setText(localPlayerName);
 
-        TextView readyText = (TextView)findViewById(R.id.readyText);
+        final TextView readyText = (TextView)findViewById(R.id.readyText);
+        final TextView readyText2 = (TextView)findViewById(R.id.readyText2);
+        final TextView readyText3 = (TextView)findViewById(R.id.readyText3);
+        final TextView pricePrompt = (TextView)findViewById(R.id.pricePrompt);
+        final TextView priceText = (TextView)findViewById(R.id.priceText);
+        final EditText priceInput = (EditText)findViewById(R.id.priceInput);
 
+        final Button readyButton = (Button)findViewById(R.id.readyButton);
+        final Button updateButton = (Button)findViewById(R.id.updateButton);
 
-        Button readyButton = (Button)findViewById(R.id.readyButton);
+        updateButton.setOnClickListener(
+                new View.OnClickListener(){
+                    public void onClick(View view) {
+                        final String price = priceInput.getText().toString();
+                        // Remove dollar sign
+                        if(price.charAt(0) == '$') {
+                            final String finalPrice = price.substring(1, price.length());
+                            priceText.setText(finalPrice);
+                        }
+                        else {
+                            final String finalPrice = price;
+                            priceText.setText(finalPrice);
+                        }
+                    }
+                }
+        );
 
         readyButton.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View view) {
                         // Change ready text to green
-                        readyButton.setTextColor(0xff99cc);
+
+                        readyText.setTextColor(0xFF99CC00);
                         // 3 second delay
                         final Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
@@ -39,7 +64,13 @@ public class ReadyPage extends AppCompatActivity {
                                 // Changes value for local player name
                                 intent.putExtra("localName", localPlayerName);
                                 startActivity(intent);*/
-                                
+                                readyText.setText("0.00");
+                                readyText2.setText("0.00");
+                                readyText3.setText("0.00");
+                                pricePrompt.setText("How much are you willing to risk?");
+                                readyButton.setText("LOCK IN");
+                                updateButton.setId(2);
+                                readyButton.setId(3);
                             }
                         }, 3000);
                     }

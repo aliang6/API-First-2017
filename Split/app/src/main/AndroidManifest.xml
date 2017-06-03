@@ -16,11 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReadyPage"/>
-        <activity android:name=".VoteforGame"></activity>
-        <activity android:name=".JoinRoom"></activity>
-        <activity android:name=".Last_Page"></activity>
-        <activity android:name=".CreateRoom"></activity>
+        <activity android:name=".ReadyPage" />
+        <activity android:name=".VoteforGame" />
+        <activity
+            android:name=".JoinRoom"
+            android:parentActivityName=".CreateJoinRoom" />
+        <activity android:name=".Last_Page" />
+        <activity
+            android:name=".CreateRoom"
+            android:parentActivityName=".CreateJoinRoom" />
+        <activity android:name=".BidPage"></activity>
     </application>
 
 </manifest>

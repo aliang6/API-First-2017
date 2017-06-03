@@ -1,0 +1,11 @@
+/Split/*.iml
+/Split/.gradle
+/Split/local.properties
+/Split/.idea/workspace.xml
+/Split/.idea/libraries
+/Split/.DS_Store
+/Split/build
+/Split/captures
+/Split/.externalNativeBuild
+/backsplit/node_modules
+/backsplit/data
