@@ -4,25 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="split.split.JoinRoom">
-
+    tools:context="split.split.JoinRoom"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="130dp"
-        android:layout_height="39dp"
-        android:text="Enter Code"
-        android:textSize="25dp"
-        android:textColor="@color/colorPrimaryDark"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="120dp" />
+        android:id="@+id/HeyText"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:fontFamily="monospace"
+        android:text="Hey "
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintRight_toLeftOf="@+id/LocalNameText"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/LocalNameText"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/textView7"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="125dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="monospace"
+        android:text="Enter a room number"
+        android:textAlignment="center"
+        android:textSize="44sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="200dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <TextView
+        android:id="@+id/LocalNameText"
+        android:layout_width="200dp"
+        android:layout_height="68dp"
+        android:fontFamily="monospace"
+        android:text="Name"
+        android:textAlignment="textStart"
+        android:textSize="50sp"
+        android:layout_marginEnd="11dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintRight_toRightOf="@+id/textView7"
+        android:layout_marginBottom="32dp"
+        android:layout_marginRight="11dp" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:layout_width="145dp"
+        android:layout_height="89dp"
         android:ems="10"
-        android:inputType="phone"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="184dp" />
+        android:fontFamily="monospace"
+        android:inputType="number"
+        android:maxLength="4"
+        android:text="0000"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.503" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="204dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:fontFamily="monospace"
+        android:text="Join"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="51dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
 </android.support.constraint.ConstraintLayout>

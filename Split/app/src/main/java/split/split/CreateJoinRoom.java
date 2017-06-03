@@ -23,10 +23,10 @@ public class CreateJoinRoom extends AppCompatActivity {
         createRoom.setOnClickListener(
             new View.OnClickListener() {
                 public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), CreateRoom.class);
                     // Changes value for local player name
-                    /*Intent intent = new Intent(view.getContext(), CreateRoom.class);
-                    intent.putExtra("localname", nameInput.getText().toString())
-                    startActivityForResult(intent, 0); */
+                    intent.putExtra("localname", nameInput.getText().toString());
+                    startActivityForResult(intent, 0);
                 }
             }
         );
