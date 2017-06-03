@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".JoinRoom"></activity>
+        <activity android:name=".Last_Page"></activity>
+        <activity android:name=".thirdpage"></activity>
+        <activity android:name=".CreateRoom"></activity>
     </application>
 
 </manifest>
