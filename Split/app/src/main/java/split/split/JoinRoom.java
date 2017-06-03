@@ -3,7 +3,7 @@ package split.split;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class JoinRoom extends AppCompatActivity {
+public class    JoinRoom extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
