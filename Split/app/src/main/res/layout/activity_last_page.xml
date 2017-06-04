@@ -86,7 +86,7 @@
         android:layout_width="164dp"
         android:layout_height="45dp"
         android:layout_marginLeft="210dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="100dp"
         android:text="Total Price"
         android:textAlignment="textStart"
         android:textSize="33sp"
