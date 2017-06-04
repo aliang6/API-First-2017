@@ -24,7 +24,7 @@ public class BidPage extends AppCompatActivity {
         final TextView betAmt1 = (TextView)findViewById(R.id.betAmt1);
         final TextView betAmt2 = (TextView)findViewById(R.id.betAmt2);
         final TextView betAmt3 = (TextView)findViewById(R.id.betAmt3);
-        final TextView priceText = (TextView)findViewById(R.id.priceText);
+        final TextView priceText = (TextView)findViewById(R.id.localPrice);
         priceText.setText(getIntent().getStringExtra("localPrice"));
         final EditText priceInput = (EditText)findViewById(R.id.priceInput);
 
@@ -54,7 +54,7 @@ public class BidPage extends AppCompatActivity {
                         // Change ready text to green
 
                         betAmt1.setTextColor(0xFF99CC00);
-                        // 3 second delay
+                        // 1 second delay
                         final Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
                             @Override
@@ -62,9 +62,10 @@ public class BidPage extends AppCompatActivity {
 
                                 // Changes value for local player name
                                 intent.putExtra("localName", localPlayerName);
+                                intent.putExtra("localPrice", getIntent().getStringExtra("localPrice"));
                                 startActivity(intent);
                             }
-                        }, 3000);
+                        }, 1000);
                     }
                 }
         );

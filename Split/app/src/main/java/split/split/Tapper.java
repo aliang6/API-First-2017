@@ -47,7 +47,8 @@ public class Tapper extends AppCompatActivity {
                     }
 
                     public void onFinish() {
-                        intent.putExtra("localname", getIntent().getStringExtra("localname"));
+                        intent.putExtra("localName", getIntent().getStringExtra("localName"));
+                        intent.putExtra("localPrice", getIntent().getStringExtra("localPrice"));
                         intent.putExtra("localScore", tapButton.getText().toString());
                         startActivity(intent);
                     }

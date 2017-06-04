@@ -27,7 +27,9 @@
             android:parentActivityName=".CreateJoinRoom" />
         <activity android:name=".BidPage" />
         <activity android:name=".Tapper" />
-        <activity android:name=".ResultPage"></activity>
+        <activity android:name=".ResultPage" />
+        <activity android:name=".LastPage" />
+        <activity android:name=".CardPage"></activity>
     </application>
 
 </manifest>

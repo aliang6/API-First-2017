@@ -29,7 +29,7 @@
         android:textAlignment="textStart"
         android:textSize="33sp"
         app:layout_constraintLeft_toRightOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/priceText" />
+        app:layout_constraintTop_toBottomOf="@+id/localPrice" />
 
     <TextView
         android:id="@+id/textView14"
@@ -112,7 +112,7 @@
         android:layout_marginTop="150dp" />
 
     <TextView
-        android:id="@+id/priceText"
+        android:id="@+id/localPrice"
         android:layout_width="115dp"
         android:layout_height="43dp"
         android:text="0.00"
@@ -157,7 +157,7 @@
         android:textAlignment="textStart"
         android:textColor="@android:color/holo_red_light"
         android:textSize="33sp"
-        app:layout_constraintLeft_toRightOf="@+id/priceText"
+        app:layout_constraintLeft_toRightOf="@+id/localPrice"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

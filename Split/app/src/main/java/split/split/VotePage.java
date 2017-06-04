@@ -19,6 +19,8 @@ public class VotePage extends AppCompatActivity {
                 new View.OnClickListener() {
                     public void onClick(View view) {
                         Intent intent = new Intent(view.getContext(), Tapper.class);
+                        intent.putExtra("localName", getIntent().getStringExtra("localName"));
+                        intent.putExtra("localPrice", getIntent().getStringExtra("localPrice"));
                         startActivity(intent);
                     }
                 }
