@@ -62,7 +62,7 @@
         android:layout_marginRight="11dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/joinRoomId"
         android:layout_width="145dp"
         android:layout_height="89dp"
         android:ems="10"
