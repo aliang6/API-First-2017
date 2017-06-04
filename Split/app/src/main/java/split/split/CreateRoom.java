@@ -27,6 +27,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -40,6 +41,7 @@ public class CreateRoom extends AppCompatActivity {
     private final String API_URL = "http://10.11.73.128:8004/create_room";
     private RequestQueue reqQueue;
     private String roomNumber;
+    private JSONArray roomMembers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +91,15 @@ public class CreateRoom extends AppCompatActivity {
                         TextView createRoomId = (TextView) findViewById(R.id.createRoomId);
                         try {
                             createRoomId.setText(""+response.get("roomId"));
-                            roomNumber = response.get("roomId").toString();
+                            roomNumber = response.getJSONObject("value").getString("roomId");
+
+                            try {
+                                Toast.makeText(getApplicationContext(),response.getJSONObject("value").getJSONArray("members").toString(),Toast.LENGTH_LONG).show();
+                                roomMembers=response.getJSONObject("value").getJSONArray("members");
+                            } catch (JSONException e) {
+                                Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG).show();
+                                e.printStackTrace();
+                            }
                         } catch (JSONException e) {
                             Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG);
                         }

@@ -25,7 +25,7 @@ public class ReadyPage extends AppCompatActivity {
         final TextView readyText2 = (TextView)findViewById(R.id.betAmt2);
         final TextView readyText3 = (TextView)findViewById(R.id.readyText3);
         final TextView pricePrompt = (TextView)findViewById(R.id.pricePrompt);
-        final TextView priceText = (TextView)findViewById(R.id.priceText);
+        final TextView priceText = (TextView)findViewById(R.id.localPrice);
         final EditText priceInput = (EditText)findViewById(R.id.priceInput);
 
         final Button readyButton = (Button)findViewById(R.id.readyButton);
@@ -56,7 +56,7 @@ public class ReadyPage extends AppCompatActivity {
                         // Change ready text to green
 
                         readyText.setTextColor(0xFF99CC00);
-                        // 3 second delay
+                        // 1 second delay
                         final Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
                             @Override
@@ -73,7 +73,7 @@ public class ReadyPage extends AppCompatActivity {
                                 updateButton.setId(2);
                                 readyButton.setId(3);*/
                             }
-                        }, 3000);
+                        }, 1000);
                     }
                 }
         );

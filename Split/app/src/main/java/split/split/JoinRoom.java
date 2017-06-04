@@ -29,6 +29,7 @@ public class JoinRoom extends AppCompatActivity {
     private final String API_URL = "http://10.11.73.128:8004/join_room";
     private RequestQueue reqQueue;
     private JSONArray roomMembers;
+    private String roomNumber;
 
     @Override
      protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +77,7 @@ public class JoinRoom extends AppCompatActivity {
                     public void onResponse(JSONObject response){
                             System.out.println(response.toString());
                         try {
+                            roomNumber = response.getJSONObject("value").getString("roomId");
                             Toast.makeText(getApplicationContext(),response.getJSONObject("value").getJSONArray("members").toString(),Toast.LENGTH_LONG).show();
                             roomMembers=response.getJSONObject("value").getJSONArray("members");
                         } catch (JSONException e) {

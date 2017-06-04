@@ -3,4 +3,10 @@
     <string name="title_activity_join_room">join_room</string>
     <string name="player_name">Name</string>
     <string name="JoinRoomId">JoinRoomId</string>
+    <string name="title_activity_last_page">LastPage</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_payment">Payment Methods</string>
+    <string name="title_prices">Total Prices</string>
 </resources>

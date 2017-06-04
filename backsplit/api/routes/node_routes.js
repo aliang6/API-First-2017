@@ -43,12 +43,10 @@ module.exports = function(app, db){
             {$push:{members:userInfo}},
             (err,item) => {
     		if (err){
-                console.log("nope");
-    			res.json({"err":err});
+                res.json({"err":err});
     		}else{
-                console.log("ITEM");
                 console.log(item);
-                item.push(userInfo);
+                item.value.members.push(userInfo);
     			res.json(item);
     		}
     	});
