@@ -26,7 +26,7 @@ public class CreateJoinRoom extends AppCompatActivity {
                     Intent intent = new Intent(view.getContext(), CreateRoom.class);
                     // Changes value for local player name
                     intent.putExtra("localname", nameInput.getText().toString());
-                    startActivityForResult(intent, 0);
+                    startActivity(intent);
                 }
             }
         );
@@ -38,7 +38,7 @@ public class CreateJoinRoom extends AppCompatActivity {
                     Intent intent = new Intent(view.getContext(), JoinRoom.class);
                     // Passes value for local player name
                     intent.putExtra("localname", nameInput.getText().toString());
-                    startActivityForResult(intent, 0);
+                    startActivity(intent);
                 }
             }
         );

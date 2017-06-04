@@ -9,7 +9,7 @@ const port = 8004
 app.use(bodyParser.urlencoded({extended:true}));
 
 
-MongoClient.connect("mongodb://localhost:27015/rooms", (err,database)=>{
+MongoClient.connect("mongodb://10.11.73.128:27015/rooms", (err,database)=>{
 	if (err) return console.log(err)
 		//sudo mongod --dbpath=/data --port 27015
 	console.log("DB created at 27015");
