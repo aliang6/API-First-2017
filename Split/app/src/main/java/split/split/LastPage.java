@@ -19,7 +19,8 @@ public class LastPage extends AppCompatActivity {
         lname.setText(getIntent().getStringExtra("localName"));
 
         final TextView lprice = (TextView)findViewById(R.id.localPrice);
-        lprice.setText(getIntent().getStringExtra("localPrice"));
+        String x = "$" + getIntent().getStringExtra("localPrice");
+        lprice.setText(x);
 
         Button venmoButton = (Button)findViewById(R.id.venmoButton);
         Button cardButton = (Button)findViewById(R.id.cardButton);
