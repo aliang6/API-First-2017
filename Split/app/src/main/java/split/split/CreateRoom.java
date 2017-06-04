@@ -51,7 +51,8 @@ public class CreateRoom extends AppCompatActivity {
         // Retrieve localplayername from CreateJoinRoom.java
         final String localPlayerName = getIntent().getStringExtra("localname");
         TextView t = (TextView)findViewById(R.id.LocalNameText);
-        t.setText(localPlayerName);
+        String x = "Hey " + localPlayerName;
+        t.setText(x);
 
         reqQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -82,7 +83,7 @@ public class CreateRoom extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Toast.makeText(getApplicationContext(),requestParams.toString(),Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(),requestParams.toString(),Toast.LENGTH_LONG).show();
 
         JsonObjectRequest req = new JsonObjectRequest(Request.Method.POST, API_URL, requestParams,
                 new Response.Listener<JSONObject>() {
@@ -94,22 +95,22 @@ public class CreateRoom extends AppCompatActivity {
                             roomNumber = response.getJSONObject("value").getString("roomId");
 
                             try {
-                                Toast.makeText(getApplicationContext(),response.getJSONObject("value").getJSONArray("members").toString(),Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(),response.getJSONObject("value").getJSONArray("members").toString(),Toast.LENGTH_LONG).show();
                                 roomMembers=response.getJSONObject("value").getJSONArray("members");
                             } catch (JSONException e) {
-                                Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG).show();
+                                //Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG).show();
                                 e.printStackTrace();
                             }
                         } catch (JSONException e) {
-                            Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG);
+                            //Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG);
                         }
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Toast.makeText(getApplicationContext(),"YIIIS",Toast.LENGTH_LONG).show();
-                        Toast.makeText(getApplicationContext(),volleyError.toString(),Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),"YIIIS",Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),volleyError.toString(),Toast.LENGTH_LONG).show();
                     }
                 }){
 

@@ -39,7 +39,8 @@ public class JoinRoom extends AppCompatActivity {
         // Retrieve localplayername from CreateJoinRoom.java
         final String localPlayerName = getIntent().getStringExtra("localname");
         TextView t = (TextView)findViewById(R.id.LocalNameText);
-        t.setText(localPlayerName);
+        String x = "Hey " + localPlayerName;
+        t.setText(x );
 
 
         reqQueue = Volley.newRequestQueue(getApplicationContext());
@@ -78,10 +79,10 @@ public class JoinRoom extends AppCompatActivity {
                             System.out.println(response.toString());
                         try {
                             roomNumber = response.getJSONObject("value").getString("roomId");
-                            Toast.makeText(getApplicationContext(),response.getJSONObject("value").getJSONArray("members").toString(),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(),response.getJSONObject("value").getJSONArray("members").toString(),Toast.LENGTH_LONG).show();
                             roomMembers=response.getJSONObject("value").getJSONArray("members");
                         } catch (JSONException e) {
-                            Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(),e.getStackTrace().toString(),Toast.LENGTH_LONG).show();
                             e.printStackTrace();
                         }
                     }
@@ -89,7 +90,7 @@ public class JoinRoom extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.toString(),Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(), error.toString(),Toast.LENGTH_LONG).show();
                     }
                 }){
             @Override
