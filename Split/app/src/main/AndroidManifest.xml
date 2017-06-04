@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReadyPage" />
-        <activity android:name=".VoteforGame" />
+        <activity android:name=".VotePage" />
         <activity
             android:name=".JoinRoom"
             android:parentActivityName=".CreateJoinRoom" />

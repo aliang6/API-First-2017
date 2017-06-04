@@ -37,11 +37,10 @@ public class BidPage extends AppCompatActivity {
                         final String price = priceInput.getText().toString();
                         // Remove dollar sign
                         if(price.charAt(0) == '$') {
-                            final String finalPrice = price.substring(1, price.length());
-                            priceText.setText(finalPrice);
+                            betAmt1.setText(price);
                         }
                         else {
-                            final String finalPrice = price;
+                            final String finalPrice = "$" + price;
                             priceText.setText(finalPrice);
                         }
                     }
@@ -51,6 +50,7 @@ public class BidPage extends AppCompatActivity {
         lockInButton.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View view) {
+                        final Intent intent = new Intent(view.getContext(), VotePage.class);
                         // Change ready text to green
 
                         betAmt1.setTextColor(0xFF99CC00);
@@ -59,10 +59,10 @@ public class BidPage extends AppCompatActivity {
                         handler.postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                /*Intent intent = new Intent(view.getContext(), BidPage.class);
+
                                 // Changes value for local player name
                                 intent.putExtra("localName", localPlayerName);
-                                startActivity(intent);*/
+                                startActivity(intent);
                             }
                         }, 3000);
                     }
