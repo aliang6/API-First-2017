@@ -54,7 +54,7 @@ public class BidPage extends AppCompatActivity {
                         // Change ready text to green
 
                         betAmt1.setTextColor(0xFF99CC00);
-                        // 1 second delay
+
                         final Handler handler = new Handler();
                         handler.postDelayed(new Runnable() {
                             @Override
@@ -65,7 +65,27 @@ public class BidPage extends AppCompatActivity {
                                 intent.putExtra("localPrice", getIntent().getStringExtra("localPrice"));
                                 startActivity(intent);
                             }
-                        }, 1000);
+                        }, 6000);
+
+                        final Handler handler2 = new Handler();
+                        handler2.postDelayed(new Runnable(){
+                            @Override
+                            public void run(){
+                                betAmt2.setText("$653");
+                                betAmt2.setTextColor(0xFF99CC00);
+                            }
+                        }, 2000);
+
+                        final Handler handler3 = new Handler();
+                        handler3.postDelayed(new Runnable(){
+                            @Override
+                            public void run(){
+                                betAmt3.setText("$9999");
+                                betAmt3.setTextColor(0xFF99CC00);
+                            }
+                        }, 4500);
+
+
                     }
                 }
         );
