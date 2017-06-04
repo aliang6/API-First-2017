@@ -2,6 +2,7 @@
     <string name="app_name">Split</string>
     <string name="title_activity_join_room">join_room</string>
     <string name="player_name">Name</string>
+    <string name="JoinRoomId">JoinRoomId</string>
     <string name="title_activity_last_page">LastPage</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
